@@ -17,7 +17,7 @@ async def main() -> int:
             prompt="hello",
             options=ClaudeAgentOptions(
                 max_turns=1,
-                no_session_persistence=True,
+                extra_args={"no-session-persistence": None},
             ),
         ):
             pass  # drain the stream to ensure the session registers server-side
